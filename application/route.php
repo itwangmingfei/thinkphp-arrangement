@@ -16,6 +16,9 @@ Route::get('Del/:id','index/User/Del');
 Route::get('Update','index/User/Update');
 Route::get('Info/:id','index/User/Info');
 Route::get('List','index/User/List');
+//模型验证validate
+Route::get('Validate','index/User/Validatetext');
+
 //原生操作
 
 //参数validate

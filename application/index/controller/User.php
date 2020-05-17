@@ -2,17 +2,34 @@
 namespace app\index\controller;
 use think\Controller;
 use app\index\model\User as UserModel;
+use app\index\validate\User as validateuser;
 
 class User extends Controller{
-
+  /*@validate验证 */
+  public function Validatetext(){
+    
+    $data = array(
+      'name' =>"Seefly",
+      'email' =>"qqqqqqqq@qq.com",
+      'phone' =>"17353953434",
+      'number' =>"4545",
+      'nums' =>22,
+    );
+    $validate = new validateuser;
+    if(!$validate->check($data)){
+      dump($validate->getError());
+    }else{
+      echo "验证通过";
+    }
+   
+    return ;
+  }
   /*
   @添加
   @聚合模型
   */
   public function Add(){
-   
     $usermodel = new UserModel;
-   
     $usermodel->name ="我的世界";
     $usermodel->password ="123123";
     $usermodel->email ="qq@qq.com";
