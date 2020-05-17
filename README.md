@@ -1,5 +1,17 @@
 #### 整理下
+```bash
+thinkphp5.0
+composer 安装
+composer create-project topthink/think=5.0.* tp5  --prefer-dist
 
+git安装
+git clone https://github.com/top-think/think tp5
+然后切换到tp5目录下面，再克隆核心框架仓库：
+git clone https://github.com/top-think/framework thinkphp
+git checkout master
+更新
+git pull https://github.com/top-think/framework
+```
 ```bash
 //Thinkphp5.0 路由以及数据库操作
 // 数据库表达式
